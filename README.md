@@ -26,24 +26,24 @@ Steps:
 - cd into the `frontend` directory
 - run `gulp` command
 
-### 2.2. What Does the Build Do?
+### 2.1. What Does the Build Do?
 
 At a high level, building this module performs the following:
 
 1. Compile all Sass files into a single `pagelibs.bundle.css`
 2. Compile all JavaScript files into a single `pagelibs.bundle.js`
 
-## 3. Maintaining this Module (Developer Notes)
+### 2.2. HTML prototype build?
 
-This module contains the frontend code for AEM client libraries and components. 
+- cd into the `frontend` directory
+- run `gulp prototype` command
 
-The expectation is that this module is owned, maintained, and updated by a developer well versed in frontend technologies and best practices. 
+### 2.2. Watch build?
 
-However, as mentioned in the [build](#3-building) section, a Java developer will be able to build this project without any assistance from frontend.
+- cd into the `frontend` directory
+- run `gulp watch` command
 
-There are two types of "objects" in this module.
-
-### 3.1. Component JavaScript/Styles
+### 3. Component JavaScript/Styles
 
 `frontend/components` contains component specific JavaScript and styles. 
 
