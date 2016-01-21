@@ -33,13 +33,15 @@ At a high level, building this module performs the following:
 1. Compile all Sass files into a single `pagelibs.bundle.css`
 2. Compile all JavaScript files into a single `pagelibs.bundle.js`
 
-### 2.2. HTML prototype build?
+### 2.2. HTML prototype build
 
+Steps:
 - cd into the `frontend` directory
 - run `gulp prototype` command
 
-### 2.3. Watch build?
+### 2.3. Watch build
 
+Steps:
 - cd into the `frontend` directory
 - run `gulp watch` command
 
