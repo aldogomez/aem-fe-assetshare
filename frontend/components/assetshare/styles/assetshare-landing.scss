@@ -1,0 +1,253 @@
+/*
+--------------------------------------------------
+    Assetshare Search Page
+-------------------------------------------------- 
+*/
+
+html, body{
+	min-height: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+
+.assetsharelanding {
+	background-size: cover;
+	background-position: center center;
+	background-image: url('/content/dam/sunpowerassets/assetshare/landing-bg.jpg');
+
+	&.page{
+		.title{
+			display: none;
+		}
+
+		background-size: cover;
+		display: table;
+		height: 100%;
+		width: 100%;
+
+		.container_16{
+			display: table-row;
+			height: 100%;
+
+			.body_container{
+				display: table-cell;
+				vertical-align: middle;
+
+				.querybuilder-wrapper{
+					width: 380px; 
+					margin: 0 auto;
+					position: relative;
+
+					&:before{
+						content: ' ';
+						position: absolute;
+						top: -50px;
+						left: 50%;
+						margin-left: -104px;
+						width: 208px;
+						height: 26px;
+						background-position: center center;
+						background-image: url('/content/dam/sunpowerassets/assetshare/sp-search-logo.png');
+					}
+
+		            text-align: left;
+		            position: relative;
+		            background-color: #ffffff;
+
+		            input{
+		                height: 23px;
+		                border: #cccccc;
+		            }
+
+		            #search-submit,
+		            input[type="text"] {
+		                padding: 2px 6px;
+					    height: 40px;
+					    width: 380px;
+					    box-sizing: border-box;
+					    z-index: 100;
+
+		      //           &::-moz-placeholder {
+						  //   color: $color;
+						  //   opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+						  // }
+						  // &:-ms-input-placeholder { color: $color; } // Internet Explorer 10+
+						  // &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+		            }
+
+		            button#search-submit-button,
+		            input[type="submit"]{
+		                display: inline-block;
+		                width: 40px;
+		                height: 40px;
+		                color: #ffffff;  
+		                border: 0px solid #000;
+		                padding: 0px;
+		                background-color: transparent;
+		                text-indent: -200px;
+		                position: absolute;
+		                top: 0;
+		                right: 0;
+		                z-index: 2;
+		                cursor: pointer;
+    					overflow: hidden;
+		            }
+
+		            &:after {
+		                display: inline-block;
+		                font: normal normal normal 14px/1 FontAwesome;
+		                font-size: inherit;
+		                text-rendering: auto;
+		                -webkit-font-smoothing: antialiased;
+		                -moz-osx-font-smoothing: grayscale;
+		                transform: translate(0, 0);
+		                content: "\f002";
+		                position: absolute;
+		                top: 0;
+		                right: 0;
+		                z-index: 1;
+		                width: 40px;
+		                height: 40px;
+		                line-height: 40px;
+		                text-align: center;
+		                // transform: rotate(90deg);
+		                cursor: pointer;
+		                background-color: $as_action_btn_bg;
+		                color: #ffffff
+		            }
+
+		            &:hover{
+
+		                &:after{
+
+		                }
+		            }
+				}
+			}
+		}
+	}
+}
+
+.asset-search{
+	background-size: cover;
+	display: table;
+	height: 100%;
+	width: 100%;
+
+	.as-container{
+		display: table-row;
+
+		.as-row{
+			display: table-cell;
+			vertical-align: middle;
+
+			.search-form-box{
+				width: 320px; 
+				margin: 0 auto;
+
+				img{
+					margin: 0 auto;
+					display: block;
+					margin-bottom: 15px;
+				}
+
+				.search-form{
+		            text-align: left;
+		            position: relative;
+		            background-color: #ffffff;
+		            overflow: hidden;
+
+		            input{
+		                height: 23px;
+		                border: #cccccc;
+		            }
+
+		            input[type="text"] {
+		                padding: 2px 6px;
+					    height: 30px;
+					    width: 100%;
+					    box-sizing: border-box;
+						margin: 0 auto;
+						display: block;
+		            }
+
+		            input[type="submit"]{
+		                display: inline-block;
+		                width: 30px;
+		                height: 30px;
+		                color: #ffffff;  
+		                border: 0px solid #000;
+		                padding: 0px;
+		                background-color: transparent;
+		                text-indent: -200px;
+		                position: absolute;
+		                top: 0;
+		                right: 0;
+		                z-index: 2;
+		                cursor: pointer;
+		            }
+
+		            &:after {
+		                display: inline-block;
+		                font: normal normal normal 14px/1 FontAwesome;
+		                font-size: inherit;
+		                text-rendering: auto;
+		                -webkit-font-smoothing: antialiased;
+		                -moz-osx-font-smoothing: grayscale;
+		                transform: translate(0, 0);
+		                content: "\f002";
+		                position: absolute;
+		                top: 0;
+		                right: 0;
+		                z-index: 1;
+		                width: 30px;
+		                height: 30px;
+		                line-height: 30px;
+		                text-align: center;
+		                transform: rotate(90deg);
+		                cursor: pointer;
+		                background-color: $as_action_btn_bg;
+		                color: #ffffff
+		            }
+
+		            &:hover{
+
+		                &:after{
+
+		                }
+		            }
+		        }
+			}
+		}
+	}
+}
+
+/*
+    Responsive (mobile first)
+    XS: 480px | SM: 768px | MD: 992px | LG: 1200px
+--------------------------------------------------
+*/
+
+/* < XS Phone */
+@media(max-width: (480px - 1)){
+    
+}
+
+/* SM Phone */
+@media(min-width: 768px){
+    
+}
+
+/* < XS Phone */
+@media(min-width: 768px) and (max-width: (992px - 1)){
+
+}
+/* MD Tablet */
+@media(min-width: 992px ){
+    
+}
+/* LG Desktop */
+@media(min-width: 1200px ){
+    
+}

@@ -1,0 +1,128 @@
+/*
+--------------------------------------------------
+    Gutter around pure cols
+
+    $space_xs:                      20px;
+    $space_sm:                      40px;
+    $space_md:                      80px;
+    $space_lg:                      120px;
+-------------------------------------------------- 
+*/
+@mixin component_padding($padding_size){
+    
+    @if $padding_size == lg {
+        padding: $space_lg;
+    } @else if $padding_size == md {
+        padding: $space_md;
+    } @else if $padding_size == sm {
+        padding: $space_ms;
+    } @else if $padding_size == xs {
+        padding: $space_xs;
+    } @else {
+        padding: 0;
+    }
+
+}
+@mixin vertical_padding($space) {
+
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: $space;
+    margin-bottom: $space;
+
+    &[class*="-bg"]{
+        
+        padding-top: $space;
+        padding-bottom: $space;
+        margin-top: 0;
+        margin-bottom: 0;
+
+    }
+
+    > [class*="-bg"]{
+        
+        //padding-top: $space;
+        //padding-bottom: $space;
+        margin-top: 0;
+        margin-bottom: 0;
+
+    }
+
+    &.vert-pad-top{
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    &.vert-pad-bottom{
+        padding-top: 0;
+        margin-top: 0;
+    }
+}
+
+.vert-pad-xs{
+    @include vertical_padding($space_xs);
+}
+.vert-pad-sm{
+    @include vertical_padding($space_sm);
+}
+.vert-pad-md{
+    @include vertical_padding($space_sm);
+}
+.vert-pad-lg{
+    @include vertical_padding($space_sm);
+}
+
+/*
+    Responsive (mobile first)
+    XS: 480px | SM: 768px | MD: 992px | LG: 1200px
+--------------------------------------------------
+*/
+
+/* Just SM Phone */
+@media( max-width: ( $breakpoint_sm - 1 ) ){
+    
+}
+/* SM Phone */
+@media( min-width: $breakpoint_sm){
+    
+}
+/* Between SM Phone and MD Tablet */
+@media( min-width: ( $breakpoint_sm ) ) and ( max-width: ( $breakpoint_md - 1 ) ){
+    
+}
+/* MD Tablet */
+@media( min-width: $breakpoint_md){
+
+    .vert-pad-xs{
+        @include vertical_padding($space_xs);
+    }
+    .vert-pad-sm{
+        @include vertical_padding($space_sm);
+    }
+    .vert-pad-md{
+        @include vertical_padding($space_md);
+    }
+    .vert-pad-lg{
+        @include vertical_padding($space_lg);
+    }
+}
+/* Between MD Tablet and LG Desktop */
+@media( min-width: ( $breakpoint_md ) ) and ( max-width: ( $breakpoint_lg - 1 ) ){
+    
+}
+/* LG Desktop */
+@media( min-width: $breakpoint_lg){
+
+    .vert-pad-xs{
+        @include vertical_padding($space_xs);
+    }
+    .vert-pad-sm{
+        @include vertical_padding($space_sm);
+    }
+    .vert-pad-md{
+        @include vertical_padding($space_md);
+    }
+    .vert-pad-lg{
+        @include vertical_padding($space_lg);
+    }
+}

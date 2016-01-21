@@ -1,0 +1,217 @@
+/*
+--------------------------------------------------
+    Banner Shared Styling
+-------------------------------------------------- 
+*/
+
+.banner{
+	position: relative;
+
+
+	/*
+	--------------------------------------------------
+	    Banner Image
+	*/
+	.media-tile{
+		padding-bottom: 51%;
+	}
+
+	/*
+	--------------------------------------------------
+	    Banner Shade
+	*/
+	&:before{
+		content: ' ';
+		position: absolute;
+		width: 100%;
+		height: inherit;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+		transition: opacity 250ms ease-in-out;
+		background-color: #000000;
+		z-index: 90;
+	}
+
+	&:hover{
+		&:before{
+			opacity: 0.2;
+		}
+	}
+
+	&.no-bg-image{
+		&:before{
+			display: none;
+		}
+	}
+
+	/*
+	--------------------------------------------------
+	    Banner Caption Position and alignment
+	*/
+	.banner-caption{
+		position: absolute;
+		width: 100%;
+		height: inherit;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 100;
+	}
+
+	.caption{
+		display: table;
+		height: 100%;
+		padding: 0;
+
+		.caption-row{
+			display: table-row;
+			height: 100%;
+
+			.caption-col{
+				display: table-cell;
+				width: 100%;
+				float: none;
+
+				a.caption-link{
+					display: block;
+					text-decoration: none;
+					margin-bottom: -20px;
+
+				  	&:after{
+				  		display: block;
+					    font: normal normal normal 14px/1 FontAwesome;
+					    font-size: inherit;
+					    text-rendering: auto;
+					    -webkit-font-smoothing: antialiased;
+					    -moz-osx-font-smoothing: grayscale;
+					    opacity: 0;
+						transition: opacity 250ms ease-in-out;
+						color: $red;
+						font-size: 20px;
+						margin-top: 15px;
+				  	}
+
+				  	&:after{
+				  		display: inline-block;
+				  		content: "\f061";
+				  	}
+
+					&:hover,
+					&:focus{
+						text-decoration: none;
+
+						&:after{
+							opacity: 1;
+						}
+					}
+
+
+				}
+
+				> div:last-child{
+					h1,h2,h3,h4,h5,h6,p{
+						margin-bottom: 0;
+					}
+				}
+			}
+			
+		}
+
+		&.top{
+			.caption-col{
+				vertical-align: top;
+			}
+		}
+
+		&.middle{
+			.caption-col{
+				vertical-align: middle;
+			}
+		}
+
+		&.bottom{
+			.caption-col{
+				vertical-align: bottom;
+			}
+		}
+
+		&.left{
+			.caption-col{
+				text-align: left;
+			}
+		}
+
+		&.center{
+			.caption-col{
+				text-align: center;
+			}
+		}
+
+		&.right{
+			.caption-col{
+				text-align: right;
+			}
+		}
+		
+	}
+
+	/*
+	--------------------------------------------------
+	    Caption Image / Icon
+	*/
+	.caption-image{
+
+		img{
+			display: inline-block;
+			padding: 0;
+			margin: 0;
+			margin-bottom: 15px;
+		}
+	}
+
+	/*
+	--------------------------------------------------
+	    Banner Text Color
+	*/
+	&.dark-text{
+		color: #000000;
+	}
+	&.white-text{
+		color: #ffffff;
+	}
+}
+
+
+/*
+    Responsive (mobile first)
+    XS: 480px | SM: 768px | MD: 992px | LG: 1200px
+--------------------------------------------------
+*/
+
+/* SM Phone */
+@media(min-width: $breakpoint_sm){
+    
+}
+/* MD Tablet */
+@media(min-width: $breakpoint_md){
+    /*
+	--------------------------------------------------
+	    If banner is suposed to go under Header
+	*/
+
+    /* Banner Under Header */
+	.under-header .banner,
+	.banner.under-header{
+		.banner-caption{
+			top: $header_height;
+		}
+	}
+}
+/* LG Desktop */
+@media(min-width: $breakpoint_lg){
+    
+}

@@ -1,0 +1,37 @@
+/*
+--------------------------------------------------
+    Banner Shared Styling
+-------------------------------------------------- 
+*/
+
+.list{
+
+	.list-item{
+		background-color: rgba(0,0,0,0.05);
+		
+
+		&:nth-of-type(odd) {
+    		//background-color: $table-bg-accent;
+			background-color: rgba(0,0,0,0.1);
+  		}
+	}
+}
+
+/*
+    Responsive (mobile first)
+    XS: 480px | SM: 768px | MD: 992px | LG: 1200px
+--------------------------------------------------
+*/
+
+/* SM Phone */
+@media(min-width: $breakpoint_sm){
+    
+}
+/* MD Tablet */
+@media(min-width: $breakpoint_md){
+    
+}
+/* LG Desktop */
+@media(min-width: $breakpoint_lg){
+    
+}

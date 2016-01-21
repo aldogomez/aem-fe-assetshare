@@ -1,0 +1,371 @@
+/*
+--------------------------------------------------
+    Assetshare Detail Page
+-------------------------------------------------- 
+*/
+
+$as_box_border_color: #D0D0D0;
+
+/*
+--------------------------------------------------
+    Asset Thumb (left column)
+*/
+@mixin as-asset-thumb(){
+	.section{
+		&.thumbnail{
+			padding-bottom: 30px;
+
+			.box{
+				padding: 0;
+				margin: 0;
+				border: none;
+
+				.thumbnailwrapper{
+					a{
+						display: block;
+
+						img.thumbnail{
+							display: block;
+							max-width: 100%;
+							width: 100%;
+						}
+					}
+				}
+				.filename{
+					display: none;
+				}
+				.line{
+					display: none;
+				}
+
+				// Buttons
+				.actions{
+					width: 100%;
+					overflow: hidden;
+					float: none;
+					
+					padding: 0;
+					margin: 0;
+					padding-top: 10px;
+
+					.section{
+						&.download,
+						&.lightbox{
+							float: left;
+
+							padding: 0;
+							margin: 0;
+							margin-right: 10px;
+
+							.action{
+								display: block;
+								background-color: $as_action_btn_bg;
+								margin: 0;
+								padding: 15px 20px;
+								font-weight: bold;
+								color: #FFF;
+								line-height: 15px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
+--------------------------------------------------
+    Asset Rendition (left column)
+*/
+@mixin as-asset-renditions(){
+	.section{
+		&.lightboxrenditions{
+			border: 1px solid $as_box_border_color;
+
+			.predicatebox{
+				width: 100;
+				overflow: hidden;
+				padding: 0;
+				margin: 0;
+
+				.title{
+					width: auto;
+					font-size: 12px;
+					background-color: #ecedec;
+					margin: 0;
+					padding: 10px;
+					font-weight: bold;
+					border: 0px none;
+					
+				}
+			}
+
+			// Add rendition link/button
+			// hidden on design
+			>a{
+				display: none;
+			}
+
+			// Hide new line break, using padding
+			>br{
+				display: none;
+			}
+
+			// Renditions list
+			// #assetviewer_download_renditions
+			// 		#assetviewer-renditions
+			.x-panel{
+				// border-color: $as_box_border_color;
+
+				.x-panel-body{
+					border: 0px none;
+				}
+
+				.lightboxrenditions{
+
+					table{
+						width: 100%;
+						border-collapse: collapse;
+
+						tr{
+							td{
+								padding: 0;
+
+								&.line{
+									border: none;
+									background: none;
+								}
+
+								&.padding-cell.bottom{
+									border: none;
+									background: none;
+								}
+							}
+							&.rendition-item{
+								border-bottom: 1px solid $as_box_border_color;
+								background: none;
+
+								td{
+									padding: 15px;
+
+									&.thumbnail-cell{
+										div{
+											// max-width: 100%;
+											// width: 100%;
+											background-size: cover;
+										}
+									}
+
+									&.title-cell{
+										padding-left: 0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
+--------------------------------------------------
+    Asset Title (right column)
+*/
+@mixin as-asset-title(){
+	.section{
+		&.title{
+
+			.line_gray{
+				display: none;
+			}
+
+			.assetTitle{
+				padding: 0;
+				padding-top: 10px;
+				padding-bottom: 20px;
+				margin: 0;
+				background-color: transparent;
+
+				table{
+					tr{
+						td{
+							font-size: 22px;
+							font-weight: normal;
+						}
+					}
+				}
+			}
+
+			.line.assetTitleLine{
+				display: none;
+			}
+		}
+	}
+}
+
+/*
+--------------------------------------------------
+    Asset Metadata (right column)
+*/
+@mixin as-asset-metadata(){
+	form{
+		border: 1px solid $as_box_border_color;
+		background-color: #ecedec;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+
+		.form{
+			width: 100;
+			overflow: hidden;
+			padding: 0;
+			margin: 0;
+
+			.title{
+				width: auto;
+				font-size: 12px;
+				background-color: #d5d5d4;
+				margin: 0;
+				padding: 10px;
+				font-weight: bold;
+				border: 0px none;
+				
+			}
+
+		}
+
+		div.section {
+		    padding: 10px;
+
+		    &.end{
+		    	padding: 0;
+		    }
+		}
+
+		.form_row{
+			overflow: hidden;
+			width: 100%;
+
+			.form_leftcol{
+				width: 100px;
+
+				.form_leftcollabel{
+					width: 90px;
+
+					label{
+						font-weight: bold;
+					}
+				}
+				.form_leftcolmark{
+					width: 10px;
+				}
+			}
+
+			.form_rightcol{
+				padding-left: 100px;
+
+				.form_rightcol_wrapper{
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+		
+	}
+}
+
+/*
+--------------------------------------------------
+    Layout
+*/
+.assetshare {
+
+	&.asseteditor{
+
+		// Main component wrapper
+		.querybuilder-wrapper{
+			display: block;
+			width: $as_container_width;
+			margin: 0 auto;
+
+			.par{
+				.parsys_column.cq-colctrl-lt0{
+					float: none;
+					padding: 0;
+					margin: 0;
+					display: block;
+					overflow: hidden;
+					padding-top: 30px;
+
+					.parsys_column.cq-colctrl-lt0-c0,
+					.parsys_column.cq-colctrl-lt0-c1{
+						float: left;
+						padding: 0;
+						margin: 0;
+						overflow: hidden;
+						box-sizing: border-box;
+						padding-left: 15px;
+						padding-right: 15px;
+					}
+
+					// Left Column
+					.parsys_column.cq-colctrl-lt0-c0{
+						width: 55%;
+
+						// Include partials mixins
+						@include as-asset-thumb();
+						@include as-asset-renditions();
+
+					}
+
+					// Right Column
+					.parsys_column.cq-colctrl-lt0-c1{
+						width: 45%;
+
+						// Include partials mixins
+						@include as-asset-title();
+						@include as-asset-metadata();
+					}
+				}
+			}
+		}
+
+		// Panel body
+		.x-panel-body {
+		    background-color: transparent;
+		}
+	}
+
+}
+
+/*
+    Responsive (mobile first)
+    XS: 480px | SM: 768px | MD: 992px | LG: 1200px
+--------------------------------------------------
+*/
+
+/* < XS Phone */
+@media(max-width: (480px - 1)){
+    
+}
+
+/* SM Phone */
+@media(min-width: 768px){
+    
+}
+
+/* < XS Phone */
+@media(min-width: 768px) and (max-width: (992px - 1)){
+
+}
+/* MD Tablet */
+@media(min-width: 992px ){
+    
+}
+/* LG Desktop */
+@media(min-width: 1200px ){
+    
+}

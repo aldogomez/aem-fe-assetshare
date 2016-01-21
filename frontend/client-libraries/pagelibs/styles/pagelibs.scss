@@ -1,0 +1,47 @@
+/**
+ *  Main css for pagelibs
+ */
+
+// Main Fonts
+// @import "common/fonts";
+
+// // Import Bootstrap 3 framework
+// @import "../../vendor/bootstrap/bootstrap";
+
+// // Common 
+// @import "common/variables"; // Variables
+// @import "common/common";
+// @import "common/formsreset"; // Form reset for AEM author
+
+// @import "common/mixins";
+// @import "common/polyfills";
+// @import "common/icons";
+
+// @import "common/typography";
+// @import "common/forms";
+
+// // Layout
+// @import "layout/layout";
+// @import "layout/gutter";
+
+// // Partials
+// @import "partials/media";
+// @import "partials/media-tiles";
+
+// // Common for Components
+// @import "components/banner";
+// @import "components/list";
+// @import "components/modal";
+
+// // Other Vendor Components
+// @import "../../../bower_components/slick-carousel/slick/slick";
+// @import "../../vendor/slick/slick-theme";
+
+// Deafult AEM Components
+@import "temp/assetshare.scss";
+// @import "temp/ui.widgets.scss";
+// @import "temp/page.scss";
+// @import "temp/clientlibs.scss";
+
+// Components
+@import "pagelibs.components";

@@ -1,0 +1,536 @@
+/*
+--------------------------------------------------
+    Assetshare List Page
+-------------------------------------------------- 
+*/
+
+/*
+--------------------------------------------------
+    Top Search Bar Mixin
+*/
+@mixin as-search-bar(){
+	> td.bar-cell{
+		border-top: none;
+		padding: 0;
+
+		background-color: $as_light_grey;
+
+		.x-btn-tl,
+		.x-btn-tr,
+		.x-btn-tc,
+		.x-btn-ml,
+		.x-btn-mr,
+		.x-btn-mc,
+		.x-btn-bl,
+		.x-btn-br,
+		.x-btn-bc{
+			width: auto;
+			height: auto;
+		}
+
+		table.bar{
+			width: $as_container_width;
+			margin: 0 auto;
+			background-color: transparent;
+
+			tr{
+				td#fulltext-cell{
+					.x-form-field-wrap{
+						background-color: #ffffff;
+
+						input.x-form-text{
+							background-color: #fff;
+    						background-image: none;
+    						border: 0px none;
+						}
+
+						.x-form-trigger{
+							background-image: none;
+    						border: 0px none;
+    						z-index: 100;
+						}
+
+			            &:after {
+			                display: inline-block;
+			                font: normal normal normal 14px/1 FontAwesome;
+			                font-size: inherit;
+			                text-rendering: auto;
+			                -webkit-font-smoothing: antialiased;
+			                -moz-osx-font-smoothing: grayscale;
+			                transform: translate(0, 0);
+			                content: "\f002";
+			                position: absolute;
+			                top: 0;
+			                right: 0;
+			                z-index: 1;
+			                width: 20px;
+			                height: 20px;
+			                line-height: 20px;
+			                text-align: center;
+			                cursor: pointer;
+			                color: #5a8bc8;
+			                z-index: 90;
+
+			                &:hover{
+			                	color: #b7cdea;
+			                }
+			            }
+					}
+				}
+				
+				td.buttons-cell{
+					.lenses{
+						.section{
+							&.mosaic,
+							&.list{
+
+								td{
+									background: none !important;
+
+									button{
+										background: none !important;
+									}
+
+									button.mosaic,
+									button.list{
+										&:before{
+											font-family: 'sun-icons';
+											speak: none;
+											font-style: normal;
+											font-weight: normal;
+											font-variant: normal;
+											text-transform: none;
+											line-height: 1;
+											-webkit-font-smoothing: antialiased;
+											-moz-osx-font-smoothing: grayscale;
+											display: block;
+											width: 20px;
+											height: 20px;
+											font-size: 18px;
+											line-height: 20px;
+											text-align: center;
+											vertical-align: middle;
+										}
+									}
+									button.mosaic{
+										&:before{
+											content: "\f009";
+										}
+									}
+									button.list{
+										&:before{
+											content: "\f0c9";
+										}
+									}
+								}
+
+								button.mosaic{
+									&:before{
+										color: #5a8bc8;
+										margin-top: 1px;
+										font-size: 17px;
+									}
+								}
+								button.list{
+									&:before{
+										color: #5a8bc8;
+									}
+								}
+
+								.x-btn-pressed{
+									button.mosaic{
+										&:before{
+											color: #b7cdea;
+										}
+									}
+									button.list{
+										&:before{
+											color: #b7cdea;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				td#savedsearch-cell{
+
+					table{
+						position: relative;
+						top: 5px;
+						left: 0px !important;
+						width: 80px;
+						height: 20px;
+
+						tr{
+
+							td{
+								background: none !important;
+
+								button{
+									background: none !important;
+									font-weight: bold;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
+--------------------------------------------------
+    Sidebar Mixin
+*/
+@mixin as-left-cell(){
+	> td.left-cell{
+		// width: 40%;
+
+		padding: 0;
+
+		border-width: 0;
+		border-style: none;
+		border-color: transparent;
+
+		border-image: none;
+
+		#left-cell-content{
+			float: right;
+			padding: 10px;
+			padding-top: 20px;
+
+			// Left Cell Sections
+			.optionspredicatebox,
+			.predicatebox{
+				background-color: #ffffff;
+				border: 1px solid $as_grey;
+				margin-bottom: 20px;
+			}
+
+			.left-predicates{
+
+				.new {
+				    height: 0;
+				    margin: 0;
+				    padding: 0;
+				}
+
+				.optionspredicatebox{
+
+					label{
+						margin-left: 10px;
+					}
+
+					.subpanel{
+						border-top: 1px solid $as_grey;
+						margin: 0;
+					}
+
+					.leftpadding {
+					    padding-left: 0;
+
+					    .leftpadding{
+					    	padding-left: 0;
+
+						    .subpanel > div > div > .x-form-check-wrap{
+						    	padding-left: 25px;
+						    }
+
+							.subpanel{
+								border-bottom: 1px solid #e1e2e3;
+								border-top: 1px dashed #e1e2e3;
+								margin: 0;
+							}
+
+					    	.x-form-check-wrap{
+
+					    	}
+
+						    .leftpadding{
+						    	padding-left: 0;
+
+								.subpanel{
+									border-bottom: 1px solid #e1e2e3;
+    								border-top: 1px dashed #e1e2e3;
+									margin: 0;
+								}
+
+						    	.x-form-check-wrap{
+						    		padding-left: 25px;
+						    	}
+
+						    	.subpanel{
+						    		padding-left: 0;
+
+							    	.x-form-check-wrap{
+							    		padding-left: 50px;
+							    	}
+						    	}
+						    }
+					    }
+					}
+
+					.level0 .x-toolbar{
+						background-color: transparent;
+					}
+
+					.x-toolbar .x-btn-mc button {
+					    height: 12px;
+					    width: 12px;
+					    margin-top: 12px;
+					}
+
+					.x-panel-noborder .x-panel-tbar-noborder .x-toolbar{
+						padding: 0;
+						margin: 0;
+
+						.collapse .x-btn-mc button.x-btn-text{
+							background: url('/etc/designs/assetshare/images/dam/assetshare/predicates/collapse.gif') no-repeat;
+						}
+
+						.expand .x-btn-mc button.x-btn-text{
+							background: url('/etc/designs/assetshare/images/dam/assetshare/predicates/expand.gif') no-repeat;
+						}
+					}
+					.x-panel-noborder .x-panel-tbar-noborder .x-toolbar .x-toolbar-cell .x-form-checkbox,
+					.x-form-check-wrap {
+					    padding-left: 10px;
+					    padding-top: 10px;
+					    padding-bottom: 5px;
+					    height: 17px;
+					    border-bottom: none;
+
+					    label{
+					    	vertical-align: top;    
+					    	margin-top: -1px;
+    						display: inline-block;
+					    }
+					}
+
+					// margin: 0px;
+					// display: inline;
+					// margin-top: 3px;
+					// line-height: 20px;
+					// float: left;
+					// display: block;
+				}
+
+				.predicatebox{
+					.title{
+					    font-size: 12px;
+					    background-color: transparent;
+						padding: 10px;
+						margin: 0;
+					    font-weight: bold;
+					}
+				}
+			}
+
+			> .actions{
+				background-color: #ffffff;
+				border: 1px solid $as_grey;
+				margin-bottom: 20px;
+
+				.title{
+				    font-size: 12px;
+				    background-color: transparent;
+					padding: 10px;
+					margin: 0;
+				    font-weight: bold;
+				}
+
+				.section {
+				    margin: 0px;
+				    padding: 10px;
+				    padding-top: 0;
+
+				    .title{
+				    	padding: 0;
+				    	padding-bottom: 10px;
+				    }
+				}
+
+				.lightbox{
+					tr{
+						td.line{
+							background: none;
+							border-top: 1px solid $as_light_grey;
+						}
+						td.thumbnail-cell {
+						    line-height: normal;
+						    width: 70px;
+						    padding-top: 0px;
+						    padding-right: 10px;
+						    padding-left: 0px;
+						    background-image: none;
+						}
+						td.title-cell {
+
+						    > div{
+						    	color: $as_blue;
+						    }
+						}
+					}
+				}
+			}
+			
+		}
+	}
+}
+
+/*
+--------------------------------------------------
+    Asset List Item
+*/
+@mixin as-lensdeck-cell(){
+	> td.lensdeck-cell{
+		// width: 60%;
+
+		border-width: 0;
+		border-style: none;
+		border-color: transparent;
+
+		border-image: none;
+
+		#lensdeck-wrapper{
+			.lens-dataview.mosaic {
+				padding: 0;
+				margin: 0;
+
+				// Asset
+				.wrapper {
+				    float: left;
+				    padding: 10px;
+				    margin: 0;
+				    background: none;
+
+				    .item{
+				    	padding: 10px;
+
+				    	.title,
+				    	.text{
+				    		background: none;
+				    	}
+
+				    	.thumbnail {
+						    height: 100px;
+						    width: 140px;
+						    background: transparent none no-repeat scroll center bottom;
+						    // background-size: contain;
+
+						    height: 140px;
+						    width: 140px;
+						    background-size: cover;
+						}
+
+				    	.title {
+						    height: 14px;
+						    margin-top: 0;
+						    margin-bottom: 2px;
+						    color: $as_blue;
+						}
+						.text {
+						    height: 47px;
+						    margin-top: 3px;
+						    line-height: 15px;
+						    color: $as_dark_grey;
+						}
+				    }
+				}
+			}
+		}
+	}
+}
+
+/*
+--------------------------------------------------
+    Layout
+*/
+.assetshare {
+
+	&.page{
+
+		> .title{
+			background-size: cover;
+			background-position: center center;
+			background-image: url('/content/dam/sunpowerassets/assetshare/landing-bg.jpg');
+			background-image: url('/content/dam/sunpowerassets/assetshare/title-bg.jpg');
+
+			h1{
+				color: #ffffff;
+				font-weight: normal;
+			}
+		}
+
+		// Main component wrapper
+		.querybuilder-wrapper{
+			display: block;
+			// width: 100%;
+
+			.hideInPreview{
+				display: none;
+			}
+
+			// Main app window
+			table.wrapper{
+				// width: 100%;
+				margin: 0 auto;
+
+				> tbody{
+					> tr{
+						> td#prebar{
+							display: none;
+						}
+
+						> td.line.postbar{
+							height: 10px;
+						}
+						
+						@include as-search-bar();
+						
+						@include as-left-cell();
+
+						@include as-lensdeck-cell();
+					}
+				}
+			}
+		}
+
+		// Panel body
+		.x-panel-body {
+		    background-color: transparent;
+		}
+	}
+}
+
+/*
+    Responsive (mobile first)
+    XS: 480px | SM: 768px | MD: 992px | LG: 1200px
+--------------------------------------------------
+*/
+
+/* < XS Phone */
+@media(max-width: (480px - 1)){
+    
+}
+
+/* SM Phone */
+@media(min-width: 768px){
+    
+}
+
+/* < XS Phone */
+@media(min-width: 768px) and (max-width: (992px - 1)){
+
+}
+/* MD Tablet */
+@media(min-width: 992px ){
+    
+}
+/* LG Desktop */
+@media(min-width: 1200px ){
+    
+}

@@ -1,0 +1,35 @@
+/*
+--------------------------------------------------
+    Assetshare Component
+-------------------------------------------------- 
+*/
+
+$sp_header_height: 60px;
+
+$as_container_width: 942px;
+
+$as_page_bg: #f9fafb;
+
+$as_blue: #2c7cc0;
+$as_dark_grey: #7b7a7b;
+$as_grey: #e1e2e3;
+$as_light_grey: #efefef;
+
+$as_action_btn_bg: #f5821f;
+
+/*
+--------------------------------------------------
+    Page Layout
+*/
+
+@import "common.scss";
+
+// @import "assetshare-images.scss";
+
+@import "assetshare-icons.scss";
+
+@import "assetshare-landing.scss";
+
+@import "assetshare-list.scss";
+
+@import "assetshare-detail.scss";

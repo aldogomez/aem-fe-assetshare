@@ -1,0 +1,66 @@
+// Section
+@mixin section_block_padding_sm(){
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+@mixin section_block_padding(){
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+@mixin section_block_padding_lg(){
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+// White sopace reset
+@mixin no_white_space(){
+	letter-spacing: -0.31em;
+    *letter-spacing: normal;
+    *word-spacing: -0.43em;
+    text-rendering: optimizespeed;
+
+    > *{
+	    letter-spacing: normal;
+	    *letter-spacing: normal;
+	    *word-spacing: normal;
+    }
+}
+
+// Text overflow
+// Requires inline-block or block for proper styling
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// WebKit-style focus
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted;
+  // WebKit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+// Link Style
+@mixin set-link-style($color, $bg, $hover, $hover_bg) {
+    color: $color;
+    @if $bg == transparent {
+        transition: color 0.15s ease;
+    } @else {
+        background-color: $bg;
+        transition: all 0.15s ease;
+    }
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $hover;
+        @if $hover_bg != transparent {
+            background-color: $hover_bg;
+        }
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,65 @@
+//--------------------------------------------------
+//    Layout
+//--------------------------------------------------
+$breakpoint_xs:					$screen-xs-min;
+$breakpoint_sm: 				$screen-sm-min;
+$breakpoint_md: 				$screen-md-min;
+$breakpoint_lg: 				$screen-lg-min;
+
+//--------------------------------------------------
+//    Padding / Margin values
+//--------------------------------------------------
+$space_xs:						20px;
+$space_sm:						40px;
+$space_md:						80px;
+$space_lg:						120px;
+
+//--------------------------------------------------
+//    Header
+//--------------------------------------------------
+$header_bg_color: 				#f3f3f3;
+$header_height: 				135px;
+$header_height_mobile: 			50px;
+
+$secondary_nav_color: 			#5a5b5e;
+$search_form_border: 			1px solid #ebebeb;
+$search_form_placeholder: 		#ebebeb;
+
+//--------------------------------------------------
+//    Footer
+//--------------------------------------------------
+$footer_bg_color: 				#ffffff;
+$footer_text_color: 			#5a5b5e;
+
+$footer_link_color: 			$footer_text_color;
+$footer_link_hover_color: 		$brand-primary;
+
+//--------------------------------------------------
+//    Color
+//--------------------------------------------------
+
+
+$red: 							#e51b24;
+
+$blue: 							#0daecd;
+$dark_blue: 					#092a48;
+
+$dark_blue_grey: 				#111c24;
+
+$dark_grey: 					#373737;
+$darker_grey_alt: 				#5a5b5e;
+$darker_grey: 					#666666;
+
+$grey_title:					#3C3C3C;
+$grey_text:						#b9b9b9;
+
+$grey: 							#999999;
+$light_grey_alt: 				#d7d7d7;
+$light_grey: 					#efefef;
+
+$dark_grey_button_1:			rgb(46, 46, 46);
+$dark_grey_button_2:			rgb(67, 67, 67);
+
+$dark_grey_31:					rgb(69, 69, 69);
+$dark_grey_32:					rgb(59, 59, 59);
+$dark_grey_33:					rgb(51, 51, 51);

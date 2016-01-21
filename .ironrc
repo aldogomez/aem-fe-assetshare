@@ -1,0 +1,45 @@
+{
+    "name": "servicenow-www",
+    "jcr_root": "servicenow-www-view/src/main/content/jcr_root",
+    "css_preprocessor": "scss",
+    "build_root": "servicenow-www-frontend",
+    "aemClientlibs": [
+        "servicenow-www.internal"
+    ],
+    "build_tool": "gulp",
+    "clientlibraries": [
+        {
+            "name": "pagelibs",
+            "aemPath": "servicenow-www-view/src/main/content/jcr_root/etc/clientlibs/pagelibs",
+            "path": "client-libraries/pagelibs/",
+            "entry": {
+                "js": "client-libraries/pagelibs/pagelibs.js",
+                "style": "client-libraries/pagelibs/styles/pagelibs.scss"
+            },
+            "components": [
+                {
+                    "name": "assetshare",
+                    "clientlibraries": [
+                        "pagelibs"
+                    ]
+                }
+            ],
+            "defaultComponents": false,
+            "styleType": "scss"
+        }
+    ],
+    "default_components": [],
+    "components": [
+        {
+            "name": "assetshare",
+            "clientlibraries": [
+                "pagelibs"
+            ]
+        }
+    ],
+    "_": [],
+    "configs": [
+        "/Users/luka/HERO/ServiceNow/github/servicenow-aem61-dotcom/.ironrc"
+    ],
+    "config": "/Users/luka/HERO/ServiceNow/github/servicenow-aem61-dotcom/.ironrc"
+}

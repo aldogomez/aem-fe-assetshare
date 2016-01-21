@@ -1,0 +1,82 @@
+/*
+--------------------------------------------------
+    Dropdowns
+-------------------------------------------------- 
+*/
+.dropdown{
+    position: relative;
+    
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        //left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 160px;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        list-style: none;
+        padding-top: 0;
+        background-color: transparent;
+
+        .dropdown-box{
+            background-color: #ffffff;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            @include box-shadow(rgba(black, 0.4) 0px 0px 5px);
+        }
+    }
+
+    &.open{
+
+        > .dropdown-menu {
+            display: inline-block;
+        }
+    }
+
+    .dropdown-backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 990
+    }
+}
+
+/*
+    Responsive (mobile first)
+    XS: 480px | SM: 768px | MD: 992px | LG: 1200px
+--------------------------------------------------
+*/
+
+/* SM Phone */
+@media(min-width: $breakpoint_sm){
+   
+}
+/* MD Tablet */
+@media(min-width: $breakpoint_md){
+    
+}
+/* LG Desktop */
+@media(min-width: $breakpoint_lg){
+    .dropdown{
+        
+        .dropdown-menu {
+            padding-top: 5px;
+
+            .dropdown-box{
+
+            }
+        }
+
+        &.open{
+
+            > .dropdown-menu {
+
+            }
+        }
+    }
+}

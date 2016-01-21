@@ -1,0 +1,178 @@
+/*
+--------------------------------------------------
+    Loading
+-------------------------------------------------- 
+*/
+$loading-1: $blue;
+$loading-2: $orange;
+$loading-3: $grey;
+$loading-trans: transparent;
+
+@-webkit-keyframes loading {
+    10% {
+        
+    }
+
+    50% {
+        background-color: $loading-trans;
+    }
+
+    60% {
+        
+    }
+}
+
+@keyframes loading {
+    10% {
+        
+    }
+
+    50% {
+        background-color: $loading-trans;
+    }
+
+    60% {
+        
+    }
+}
+
+.loading:not(:required) {
+    @include animation(loading 1200ms 300ms infinite ease-out);
+    background: $loading-2;
+    display: inline-block;
+    position: relative;
+    text-indent: -9999px;
+    width: 1em;
+    height: 1em;
+    margin: 0 2.5em;
+    margin-top: 0.5em;
+    vertical-align: top;
+    //border-radius: 40px;
+}
+.loading:not(:required):before,
+.loading:not(:required):after {
+    content: '\x200B';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 0;
+    //border-radius: 40px;
+}
+.loading:not(:required):before {
+    @include animation(loading 1200ms 150ms infinite ease-out);
+    left: -1.6em;
+    background: $loading-1;
+}
+.loading:not(:required):after {
+    @include animation(loading 1200ms 450ms infinite ease-out);
+    right: -1.6em;
+    background: $loading-3;
+}
+
+.uploading:not(:required) {
+    @include animation(loading 1200ms 300ms infinite ease-out);
+    background: $loading-2;
+    display: inline-block;
+    position: relative;
+    text-indent: -9999px;
+    width: 1em;
+    height: 1em;
+    margin: 0 2.5em;
+    margin-top: 0.5em;
+    vertical-align: top;
+    //border-radius: 40px;
+}
+.uploading:not(:required):before,
+.uploading:not(:required):after {
+    content: '\x200B';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 0;
+    //border-radius: 40px;
+}
+.uploading:not(:required):before {
+    @include animation(loading 1200ms 150ms infinite ease-out);
+    left: -1.6em;
+    background: $loading-1;
+}
+.uploading:not(:required):after {
+    @include animation(loading 1200ms 450ms infinite ease-out);
+    right: -1.6em;
+    background: $loading-3;
+}
+
+.overlay-loading{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    opacity: 1;
+
+    z-index: 10000;
+
+    .loading:not(:required) {
+        @include animation(loading 1200ms 300ms infinite ease-out);
+        background: $loading-2;
+        display: inline-block;
+        position: relative;
+        text-indent: -9999px;
+        width: 1em;
+        height: 1em;
+        //margin: 0 2.5em;
+        //margin-top: 0.5em;
+        vertical-align: top;
+        //border-radius: 40px;
+    }
+    .loading:not(:required):before,
+    .loading:not(:required):after {
+        content: '\x200B';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        position: absolute;
+        top: 0;
+        //border-radius: 40px;
+    }
+    .loading:not(:required):before {
+        @include animation(loading 1200ms 150ms infinite ease-out);
+        left: -1.6em;
+        background: $loading-1;
+    }
+    .loading:not(:required):after {
+        @include animation(loading 1200ms 450ms infinite ease-out);
+        right: -1.6em;
+        background: $loading-3;
+    }
+
+    .loading{
+        position: absolute !important;
+        left: 50%;
+        top: 50%;
+        margin-top: -0.5em;
+        margin-left: -2em;
+    }
+}
+
+/*
+    Responsive (mobile first)
+    XS: 480px | SM: 768px | MD: 992px | LG: 1200px
+--------------------------------------------------
+*/
+
+/* SM Phone */
+@media(min-width: $breakpoint_sm){
+    
+}
+/* MD Tablet */
+@media(min-width: $breakpoint_md){
+    
+}
+/* LG Desktop */
+@media(min-width: $breakpoint_lg){
+
+}

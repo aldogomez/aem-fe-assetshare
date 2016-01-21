@@ -1,0 +1,154 @@
+/*
+--------------------------------------------------
+    Modal - Bootstrap modal
+-------------------------------------------------- 
+*/
+
+.modal-dialog {
+  background-color: #000000;
+
+  .container{
+    width: 100%;
+  }
+
+  .modal-content{
+    border: none;
+  }
+
+  .modal-header {
+    padding: 0;
+    //padding-top: 70px;
+    border-bottom: none;
+    position: relative;
+    height: 0;
+    min-height: 0;
+
+    h3{
+
+    }
+
+    &.img-bg{
+      color: #ffffff;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .close {
+      display: block;
+      width: 30px;
+      height: 30px;
+
+      border: none;
+      border-radius: 100px;
+      background-color: $light_grey;
+
+      position: absolute;
+      top: -15px;
+      right: -15px;
+
+      opacity: 1;
+      z-index: 10100;
+
+      &:before,
+      &:after{
+        transform: translateZ(0);
+        content: ' ';
+        position: absolute;
+        background-color: #000000;
+        display: block;
+      }
+
+      &:before{
+        width: 20px;
+        height: 3px;
+        top: 14px;
+        left: 5px;
+        transform: rotate(45deg);
+      }
+
+      &:after{
+        width: 20px;
+        height: 3px;
+        top: 14px;
+        left: 5px;
+        transform: rotate(-45deg);
+      }
+
+      &.collapse{
+
+        &:after{
+          display: none;
+        }
+      }
+
+      &:hover,
+      &:focus{
+        color: #000000;
+      }
+
+      &:hover,
+      &:focus{
+        color: $red;
+        border-color: $red;
+        opacity: 1;
+
+        &:before,
+        &:after{
+          background-color: $red;
+        }
+      }
+    }
+  }
+  .modal-body{
+    padding: 0;
+  }
+  .modal-footer{
+    display: none;
+    padding: 0;
+  }
+}
+
+/*
+    Responsive (mobile first)
+    XS: 480px | SM: 768px | MD: 992px | LG: 1200px
+--------------------------------------------------
+*/
+
+/* SM Phone */
+@media(min-width: $breakpoint_sm){
+  .modal-lg {
+    width: 750px;
+  }
+}
+/* MD Tablet */
+@media(min-width: $breakpoint_md){
+  .modal-lg {
+    width: 950px;
+  }
+
+}
+/* LG Desktop */
+@media(min-width: $breakpoint_lg){
+
+  .modal-lg {
+    width: 1050px;
+  }
+
+  .modal-dialog {
+    position: relative;
+    //width: auto;
+    margin: 0;
+
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    //@include translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%) !important;
+    -ms-transform: translate(-50%, -50%) !important;
+    -webkit-transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+}

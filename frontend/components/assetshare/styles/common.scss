@@ -1,0 +1,159 @@
+/*
+--------------------------------------------------
+    Common Page Parts
+-------------------------------------------------- 
+*/
+
+body{
+	padding: 0;
+	margin: 0;
+
+    font-family: Tahoma, Arial, Verdana, sans-serif;
+    font-size: 14px;
+    color: #666666;
+}
+
+/*
+--------------------------------------------------
+    Header (white bg) with logo
+*/
+#CQ #cq-header.cq-damadmin-header{
+	background-image: none !important;
+	background-color: #ffffff !important;
+	padding: 0;
+	overflow: hidden;
+	height: $sp_header_height;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+
+	&:before{
+		content: ' ';
+		width: 215px;
+		height: 15px;
+		background-size: cover;
+		background-position: center left;
+		background-image: url('/content/dam/sunpowerassets/assetshare/sp-logo.png');
+
+		position: absolute;
+		left: 30px;
+		top: 50%;
+		margin-top: -7px;
+	}
+
+	.sp-container{
+		margin: 0 auto;
+		position: relative;
+		height: 100%;
+		width: $as_container_width;
+
+		.logo{
+			display: block;
+			position: absolute;
+			left: 15px;
+			top: 50%;
+			margin-top: -12px;
+			width: 160px;
+			height: 24px;
+
+			img{
+				display: block;
+			    max-width: 100%;
+			    width: 100%;
+
+			}
+		}
+
+		.top-navigation{
+			float: right;
+			display: block;
+			height: 30px;
+			padding: 15px;
+
+			ul{
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				text-align: right;
+
+				li{
+					display: inline-block;
+					margin: 0;
+					padding: 0;
+					margin-left: 15px;
+
+					a{
+						text-decoration: none;
+						line-height: 30px;
+						font-size: 12px;
+						text-transform: uppercase;
+						color: #666666;
+
+						&:hover,
+						&:focus{
+							color: $as_action_btn_bg;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+/*
+--------------------------------------------------
+    Main Layout
+*/
+.assetshare,
+.assetsharelanding {
+	background-color: $as_page_bg;
+
+	// Body padding
+	padding: 0;
+	padding-top: 60px;
+
+	// Page title
+	.title{
+		width: 100%;
+
+		h1{
+			border-top: 0px none;
+			width: $as_container_width;
+			display: block;	
+			padding: 40px 30px;
+			margin: 0 auto;
+		}
+	}
+}
+
+/*
+    Responsive (mobile first)
+    XS: 480px | SM: 768px | MD: 992px | LG: 1200px
+--------------------------------------------------
+*/
+
+/* < XS Phone */
+@media(max-width: (480px - 1)){
+    
+}
+
+/* SM Phone */
+@media(min-width: 768px){
+    
+}
+
+/* < XS Phone */
+@media(min-width: 768px) and (max-width: (992px - 1)){
+
+}
+/* MD Tablet */
+@media(min-width: 992px ){
+    
+}
+/* LG Desktop */
+@media(min-width: 1200px ){
+    
+}

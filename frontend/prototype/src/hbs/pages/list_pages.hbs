@@ -1,0 +1,44 @@
+---
+pagetitle: Page Templates
+published: true
+layout: list
+pagedescription: Test Description
+---
+
+<!-- Background Component -->
+<section class="background-component vert-pad-sm">
+    <div class="container">
+
+        <h2>Page Templates</h2>
+        
+        <div class="table-responsive">
+            <table class="table">
+                <colgroup>
+                    <col class="col-xs-3">
+                    <col class="col-xs-3">
+                    <col class="col-xs-4">
+                    <col class="col-xs-2">
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th colspan="4"><h4>Homepage</h4></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#listTemplates 'homepage' 'page'}}{{/listTemplates}}
+                </tbody>
+
+                <thead>
+                    <tr>
+                        <th colspan="4"><h4>L2</h4></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#listTemplates 'l2' 'page'}}{{/listTemplates}}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>
