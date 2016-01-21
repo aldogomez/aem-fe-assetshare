@@ -38,7 +38,7 @@ At a high level, building this module performs the following:
 - cd into the `frontend` directory
 - run `gulp prototype` command
 
-### 2.2. Watch build?
+### 2.3. Watch build?
 
 - cd into the `frontend` directory
 - run `gulp watch` command
